@@ -3,13 +3,16 @@ namespace App\Modules\Tasks\Controllers;
 
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
-use App\Modules\Task;
+use App\Modules\Tasks\Models\Task;
 
 class TaskController extends Controller{
-	protected $tasks;
+	public $tasks;
 	public function __construct(){
 		$this->tasks = Task::orderBy('created_at', 'asc')->get();
 	}
+    public function getData(){
+        return $this->tasks;
+    }
 
 	public function Index(Request $request)
 {
@@ -28,6 +31,6 @@ class TaskController extends Controller{
     $task->name = $request->name;
     $task->save();
 
-    return redirect('/main/task');
+    return redirect('/main/');
 	}
 }

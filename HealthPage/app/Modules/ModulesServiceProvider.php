@@ -18,6 +18,8 @@ public function boot()
             if(is_dir(__DIR__.'/'.$module.'/Views')) {
                 $this->loadViewsFrom(__DIR__.'/'.$module.'/Views', $module);
             }
+            //
+
         }
     }
 public function register() {}
