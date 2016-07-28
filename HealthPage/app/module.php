@@ -17,4 +17,8 @@ class Module extends Model
 	public function getView(){
 		return "$name::PanelView";
 	}
+	public function getDataForUser(User $user){
+		return [];
+
+	}
 }

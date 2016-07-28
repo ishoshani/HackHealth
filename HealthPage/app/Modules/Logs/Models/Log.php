@@ -1,12 +1,12 @@
 <?php
 
-namespace App\Modules\Tasks\Models;
+namespace App\Modules\Logs\Models;
 
 use Illuminate\Database\Eloquent\Model;
 
-class Task extends Model
+class Log extends Model
 {
-	protected $fillable =['name'];
+	protected $fillable =['name','body'];
 	public function user(){
 
 		return $this->belongsTo(User::class);

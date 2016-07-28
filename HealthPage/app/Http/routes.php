@@ -11,6 +11,11 @@
 |
 */
 use Illuminate\Http\Request;
-	Route::group(['prefix'=>'main'], function() {
+	Route::get("/", function (){
+		return redirect('/home');
+	});
+	Route::group(['prefix'=>'home'], function() {
 		Route::get("/","CoreController@index");
- 	});
+	});
+	Route::auth();
+

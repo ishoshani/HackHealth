@@ -3,6 +3,8 @@
 namespace App;
 
 use Illuminate\Foundation\Auth\User as Authenticatable;
+use App\Modules\Tasks\Models\Task;
+use App\Modules\Logs\Models\Log;
 
 class User extends Authenticatable
 {
@@ -23,4 +25,12 @@ class User extends Authenticatable
     protected $hidden = [
         'password', 'remember_token',
     ];
+
+    public function tasks(){
+        return $this->hasMany(Task::class);
+
+    }
+    public function logs(){
+        return $this->hasMany(Log::class);
+    }
 }

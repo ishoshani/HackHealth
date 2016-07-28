@@ -1,13 +1,12 @@
-<html>
-	<body>
+@extends('layouts.app')
+@section('content')
+	<div class="panel -primary">
 	the current modules are
 	@foreach ($modules as $module)
 	{{$module}}
 	@endforeach
-	</body>
+	</div>
 	@foreach($classes as $class)
-	@include($class->getView(), ["tasks"=>$class->getData()])
+	@include($class->getView(), ["data"=>$class->getDataforUser($user)])
 	@endforeach
-
-
-</html>
+@endsection

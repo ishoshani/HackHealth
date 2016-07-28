@@ -2,6 +2,7 @@
 # config/module.php
 return [
 	"modules" => [
-		'Tasks'
+		'Tasks',
+		'Logs'
 		]
 	];

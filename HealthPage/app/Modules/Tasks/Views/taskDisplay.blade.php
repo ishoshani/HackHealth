@@ -1,5 +1,6 @@
 <!-- resources/views/tasks.blade.php -->
-
+@extends('layouts.app')
+@section('content')
 <div class = "panel panel-default">
 <div class="panel-heading">
     <h3 class="panel-title">Tasks</h3>
@@ -78,3 +79,4 @@
 </div>
 @endif
 </div>
+@endsection
