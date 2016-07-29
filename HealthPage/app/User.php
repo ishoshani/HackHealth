@@ -5,6 +5,8 @@ namespace App;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use App\Modules\Tasks\Models\Task;
 use App\Modules\Logs\Models\Log;
+use App\Doctor; 
+use Illuminate\Database\QueryException;
 
 class User extends Authenticatable
 {
@@ -14,7 +16,7 @@ class User extends Authenticatable
      * @var array
      */
     protected $fillable = [
-        'name', 'email', 'password',
+        'name', 'email', 'password','doctor','doctor_id'
     ];
 
     /**

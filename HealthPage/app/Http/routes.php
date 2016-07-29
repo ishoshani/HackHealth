@@ -18,4 +18,6 @@ use Illuminate\Http\Request;
 		Route::get("/","CoreController@index");
 	});
 	Route::auth();
+	Route::get("/home/newPatient/{id}", "NewPatientController@index");
+	Route::post("/home/newPatient","NewPatientController@store");
 

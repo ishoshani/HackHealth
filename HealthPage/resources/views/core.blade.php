@@ -1,6 +1,10 @@
 @extends('layouts.app')
 @section('content')
-	<div class="panel -primary">
+	
+	@if($doctor)
+	@include('doctor',["patients"=>$patients,"user"=>$user])
+	@endif
+	<div class="panel-primary">
 	the current modules are
 	@foreach ($modules as $module)
 	{{$module}}

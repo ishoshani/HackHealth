@@ -7,7 +7,7 @@
             <div class="panel panel-default">
                 <div class="panel-heading">Register</div>
                 <div class="panel-body">
-                    <form class="form-horizontal" role="form" method="POST" action="{{ url('/register') }}">
+                    <form class="form-horizontal" role="form" method="POST" action="{{ url('/home/newPatient') }}">
                         {{ csrf_field() }}
 
                         <div class="form-group{{ $errors->has('name') ? ' has-error' : '' }}">
@@ -66,14 +66,8 @@
                             </div>
                         </div>
                         <div class="form-group">
-                            <label for="is-doctor" class="col-md-4 control-label">
-                                Are you a doctor?
-                            </label>
-                            <div class="col-md-6">
-                            <input id="doctor" type="checkbox" class="form-control" name="doctor" value=1å>
-                            </div>
+                           <input id="doctor_id" type="hidden" class="form-control" name="doctor_id" value={{$doctor}}
                         </div>
-
                         <div class="form-group">
                             <div class="col-md-6 col-md-offset-4">
                                 <button type="submit" class="btn btn-primary">
