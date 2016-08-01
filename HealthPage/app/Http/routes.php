@@ -20,4 +20,5 @@ use Illuminate\Http\Request;
 	Route::auth();
 	Route::get("/home/newPatient/{id}", "NewPatientController@index");
 	Route::post("/home/newPatient","NewPatientController@store");
+	Route::get("/home/PatientView/{id}", "PatientController@index");
 

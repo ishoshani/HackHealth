@@ -14,7 +14,7 @@ class Module extends Model
 		return [];
 	}
 	//Return string for viewing
-	public function getView(){
+	public function getView(bool $isEditable){
 		return "$name::PanelView";
 	}
 	public function getDataForUser(User $user){
