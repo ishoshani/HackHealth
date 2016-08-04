@@ -1,3 +1,10 @@
+<!--Copyright © 2016 Ido Shoshani -->
+
+
+<!--This program is released under the "GPL license".
+   Please see the file LICENSE in this distribution for
+   license terms. -->
+   
 <!-- resources/views/tasks.blade.php -->
 <!-- No Edit Version for doctors -->
 <div class = "panel panel-default">
