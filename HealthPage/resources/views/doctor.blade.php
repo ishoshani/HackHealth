@@ -1,3 +1,9 @@
+<!--Copyright © 2016 Ido Shoshani -->
+
+
+<!--This program is released under the "GPL license".
+   Please see the file LICENSE in this distribution for
+   license terms. -->
 <div class="panel-primary">
 
 	<table class="table-default">
@@ -17,6 +23,9 @@
 			</td>
 			<td>
 				{{$patient->name}}
+			</td>
+			<td>
+				<a href="{{url('home/PatientView/'.$patient->id)}}"><button class="button button-default">Go to Patient</button></a>
 			</td>
 		</tr>
 		@endforeach

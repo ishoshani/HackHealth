@@ -1,4 +1,3 @@
-
 <!--Copyright © 2016 Ido Shoshani -->
 
 
@@ -8,9 +7,7 @@
 @extends('layouts.app')
 @section('content')
 	
-	@if($doctor)
-	@include('doctor',["patients"=>$patients,"user"=>$user])
-	@endif
+	
 	<div class="panel-primary">
 	the current modules are
 	@foreach ($modules as $module)
@@ -18,6 +15,6 @@
 	@endforeach
 	</div>
 	@foreach($classes as $class)
-	@include($class->getView(true), ["data"=>$class->getDataforUser($user)])
+	@include($class->getView(false), ["data"=>$class->getDataforUser($patient)])
 	@endforeach
 @endsection

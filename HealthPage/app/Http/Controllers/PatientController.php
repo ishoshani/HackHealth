@@ -11,13 +11,13 @@ use App\Http\Controllers\Controller;
 use App\User;
 
 
-class CoreController extends Controller{
+class PatientController extends Controller{
 protected $modules;
 protected $classes;
 protected $user;
 
 public function __construct(){
-	$this->middleware('auth');
+	$this->middleware('web');
 	$this->modules = config("module.modules");
 	$this->classes=[];
 	foreach ($this->modules as $module) {
@@ -29,14 +29,12 @@ public function getPatients(int $doctor_id){
 	return User::where('doctor_id',$doctor_id)->orderby('created_at','asc')->get();
 
 }
-public function index(Request $request){
+public function index(int $id){
 	$m = $this->modules;
 	$c = $this->classes;
-	$is = $request->user()->doctor;
-	$p = $this->getPatients($request->user()->id);
+	$p = User::find($id);
 
-
-	return view("core", ['modules'=>$m, 'classes'=>$c, 'user'=>$request->user(),'doctor'=>$is,'patients'=>$p]);
+	return view("patient", ['modules'=>$m, 'classes'=>$c,'patient'=>$p]);
 }
 
 

@@ -15,8 +15,11 @@ class TasksModule extends Module
 	public function getData(){
 		return Task::orderBy('created_at', 'asc')->get();
 	}
-	public function getView(){
+	public function getView(bool $editable){
+		if($editable){
 		return "Tasks::tasks";
+		}
+		return "Tasks::tasksView";
 	}
 	public function getDataForUser(User $user){
 		return $user->tasks()->orderBy('created_at', 'asc')->get();

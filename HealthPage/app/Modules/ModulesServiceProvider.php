@@ -1,5 +1,13 @@
 <?php 
+/* Copyright © 2016 Ido Shoshani */
+
+
+/* This program is released under the "GPL license".
+   Please see the file LICENSE in this distribution for
+   license terms. */
+/* based on intermediate task list from the laravel documenation*/
 namespace App\Modules;
+
 //ModulesServiceProvider
 // based on guide by Kamran Ahmed
 class ModulesServiceProvider extends \Illuminate\Support\ServiceProvider{

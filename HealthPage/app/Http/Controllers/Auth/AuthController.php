@@ -1,7 +1,11 @@
 <?php
+/* Copyright © 2016 Ido Shoshani */
 
+
+/* This program is released under the "GPL license".
+   Please see the file LICENSE in this distribution for
+   license terms. */
 namespace App\Http\Controllers\Auth;
-
 use App\User;
 use Validator;
 use App\Http\Controllers\Controller;
@@ -67,7 +71,7 @@ class AuthController extends Controller
             'name' => $data['name'],
             'email' => $data['email'],
             'password' => bcrypt($data['password']),
-            'doctor' => $data['doctor'],
+            'doctor' => array_key_exists('doctor', $data),
             'doctor_id' => 0,
         ]);
     }

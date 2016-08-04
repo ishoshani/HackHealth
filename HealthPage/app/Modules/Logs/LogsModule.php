@@ -15,8 +15,11 @@ class LogsModule extends Module
 	public function getData(){
 		return Logs::orderBy('created_at', 'asc')->get();
 	}
-	public function getView(){
-		return 'Logs::logsPanel';
+	public function getView(bool $isEditable){
+		if($isEditable){
+			return 'Logs::logsPanel';
+		}
+		return 'Logs::logsPanelView';
 	}
 	public function getDataForUser(User $user){
 		return $user->logs()->orderBy('created_at', 'asc')->get();
