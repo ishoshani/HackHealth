@@ -62,7 +62,7 @@ return [
             'host' => env('DB_HOST', 'localhost'),
             'port' => env('DB_PORT', '3306'),
             'database' => env('DB_DATABASE', 'forge'),
-	    'username'=>'root',
+	        'username'=>'root',
             'password' => 'root',
             'charset' => 'utf8',
             'collation' => 'utf8_unicode_ci',
