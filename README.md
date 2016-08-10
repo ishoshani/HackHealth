@@ -17,6 +17,7 @@ Setting up:
 My personal recommendation is to set this up on a [homestead](https://laravel.com/docs/5.2/homestead). You can do this fairly easily with a virtualbox and vagrant, and pretty much sets itself up. This allows for particularly easy local hosting, though you can also just use a local LAMP setup as well.
 
 the documentation for laravel can be found [here](https://laravel.com/docs/5.2)
+Most of the internal structure is based off this(arguably overly so), so use that for how to create the individual files.
 
 Creating new modules:
 
