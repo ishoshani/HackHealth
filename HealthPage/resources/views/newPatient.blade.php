@@ -5,6 +5,7 @@
    Please see the file LICENSE in this distribution for
    license terms. -->
 @extends('layouts.app')
+<!--Registration Page for doctors to register new patients-->
 
 @section('content')
 <div class="container">

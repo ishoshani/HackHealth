@@ -6,7 +6,7 @@
    license terms. -->
 @extends('layouts.app')
 @section('content')
-	
+	<!-- eventually intend for doctors not to need to see panels and for modules to be enabled and disabled for patients, so created the panels as a separate thing for patients, currently redundant and not in use-->
 	
 	<div class="panel-primary">
 	the current modules are

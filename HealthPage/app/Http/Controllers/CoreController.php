@@ -9,8 +9,14 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use App\User;
+/*
+Controller for the users main view, the portal view. Loads up the panels of each module and displays them. What is in the panel is dependant on the module
 
+modules must be properly namespaced, have a [modulename]Module.php folder, or atleast have a folder namespaced as such, and be in the modules config file to be included. They should also inherit and have methods for all the things in the module.php folder
 
+A feature feature should be to make displaying ind. modules optional.
+
+*/
 class CoreController extends Controller{
 protected $modules;
 protected $classes;
@@ -30,13 +36,13 @@ public function getPatients(int $doctor_id){
 
 }
 public function index(Request $request){
-	$m = $this->modules;
-	$c = $this->classes;
-	$is = $request->user()->doctor;
-	$p = $this->getPatients($request->user()->id);
+	$modules = $this->modules;
+	$classes = $this->classes;
+	$isDoctor = $request->user()->doctor;
+	$patients = $this->getPatients($request->user()->id);
 
 
-	return view("core", ['modules'=>$m, 'classes'=>$c, 'user'=>$request->user(),'doctor'=>$is,'patients'=>$p]);
+	return view("core", ['modules'=>$modules, 'classes'=>$classes, 'user'=>$request->user(),'doctor'=>$isDoctor,'patients'=>$patients]);
 }
 
 

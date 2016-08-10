@@ -4,6 +4,7 @@
 <!--This program is released under the "GPL license".
    Please see the file LICENSE in this distribution for
    license terms. -->
+<!--Displays a table of patients belonging to this doctor-->
 <div class="panel-primary">
 
 	<table class="table-default">

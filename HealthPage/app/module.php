@@ -6,6 +6,10 @@ use Illuminate\Database\Eloquent\Model;
 
 class Module extends Model
 {
+	/*
+	Base class for modules. EveryModule should have a file that inherits from this, and have something other than than the default for the following methods.
+
+	*/
 	public $name;
 	public function __construct(){
 		 $name = "Unamed module";
