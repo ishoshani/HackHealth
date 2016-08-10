@@ -25,3 +25,8 @@ To create a new module, simply add your modules name to the module.php file in t
 
 You should include all modules in the module folder, controllers in a controller folder, and views in the view folder.
 At the moment, we do not have a way to scan for migrations, so any new migrations must be included into the /database/migration folder, and most modules will probably also need to add a relationship between their models and the user. 
+
+Testing:
+
+Make sure to use vendor/bin/phpunit to run all the tests in the test folder to ensure everything is working fine. Creating tests can be done as laravel test as specified in their documentation. Add new tests into the healthpage/tests folder. TESTING WILL ROLLBACK DB AT END, TEST ON LOCAL SERVER NOT ON PRODUCTION SERVER. I mean, come on.
+
