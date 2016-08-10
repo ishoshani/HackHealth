@@ -77,8 +77,9 @@
             </div>
         </div>
     </nav>
-
+    <small> this website is demonstration only. Do not input actual medical data into this website.
     @yield('content')
+    <small>Copyright © 2016 Ido Shoshani, released under GPL license</small>
 
 
 
